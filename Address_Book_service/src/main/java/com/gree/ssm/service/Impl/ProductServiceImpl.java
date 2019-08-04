@@ -11,6 +11,7 @@
 
 package com.gree.ssm.service.Impl;
 
+import com.github.pagehelper.PageHelper;
 import com.gree.ssm.dao.IProductDao;
 import com.gree.ssm.domain.Product;
 import com.gree.ssm.service.IProductService;
@@ -35,7 +36,15 @@ public class ProductServiceImpl implements IProductService{
     @Autowired
     private IProductDao iProductDao;
     @Override
-    public List<Product> findAll() throws Exception {
+    public List<Product> findAll(int page,int size) throws Exception {
+        PageHelper.startPage(page,size);
         return iProductDao.findAll();
     }
+
+    @Override
+    public List<Product> findByConditionList(int page,int size,String userID, String username, String userPost, String userWork) {
+        PageHelper.startPage(page,size);
+        return iProductDao.findByConditionList(userID,username,userPost,userWork);
+    }
+
 }

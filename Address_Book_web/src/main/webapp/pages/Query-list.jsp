@@ -105,10 +105,13 @@
 										<button type="submit"  class="btn btn-default queryUserInfo" title="查询" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">
 											<i class="fa fa-file-o"></i> 查询
 										</button>
-
-										<button type="button"  class="btn btn-default" title="刷新">
+										<button type="button" onclick="location.href='${pageContext.request.contextPath}/product/findAll.do?page=1&size=${pageInfo.pageSize}'" class="btn btn-default" title="返回">
+											<i class="fa fa-backward"></i> 返回
+										</button>
+										<button type="button" onclick="location.href='${pageContext.request.contextPath}/product/findAll.do?page=1&size=${pageInfo.pageSize}'" class="btn btn-default" title="刷新">
 											<i class="fa fa-refresh"></i> 刷新
 										</button>
+
 									</div>
 								</div>
 							</div>
@@ -174,7 +177,7 @@
 					<!-- /.box-body -->
 
 					<!-- .box-footer-->
-					<div class="box-footer">
+					<%--<div class="box-footer">
 						<div class="pull-left">
 							<div class="form-group form-inline">
 								总共${pageInfo.pages} 页，共${pageInfo.total}条数据。 每页
@@ -200,7 +203,7 @@
 							</ul>
 						</div>
 
-					</div>
+					</div>--%>
 					<!-- /.box-footer-->
 
 
@@ -304,6 +307,7 @@
         function changePageSize() {
             //获取下拉框的值
             var pageSize = $("#changePageSize").val();
+
             //向服务器发送请求，改变没页显示条数
             location.href = "${pageContext.request.contextPath}/product/findAll.do?page=1&size="
                 + pageSize;

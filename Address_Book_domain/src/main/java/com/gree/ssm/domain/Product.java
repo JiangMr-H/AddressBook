@@ -22,94 +22,77 @@ import java.util.Date;
  * @since 1.0.0
  */
 public class Product {
-    private String id; // 主键
-    private String productNum; // 编号 唯一
-    private String productName; // 名称
-    private String cityName; // 出发城市
-    private Date departureTime; // 出发时间
-    private String departureTimeStr;
-    private double productPrice; // 产品价格
-    private String productDesc; // 产品描述
-    private Integer productStatus; // 状态 0 关闭 1 开启
-    private String productStatusStr;
+//    private String id;
+    private String 员工编号; //
+    private String 员工姓名; //
+    private String 单位; //
+    private String 性别; //
+    private String 岗位;
+    private String 手机号码; //
+    private String 工资体系; //
+    private String 所属科室名称; //
 
-    public String getId() {
-        return id;
+    public String get员工编号() {
+        return 员工编号;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void set员工编号(String 员工编号) {
+        this.员工编号 = 员工编号;
     }
 
-    public String getProductNum() {
-        return productNum;
+    public String get员工姓名() {
+        return 员工姓名;
     }
 
-    public void setProductNum(String productNum) {
-        this.productNum = productNum;
+    public void set员工姓名(String 员工姓名) {
+        this.员工姓名 = 员工姓名;
     }
 
-    public String getProductName() {
-        return productName;
+    public String get单位() {
+        return 单位;
     }
 
-    public void setProductName(String productName) {
-        this.productName = productName;
+    public void set单位(String 单位) {
+        this.单位 = 单位;
     }
 
-    public String getCityName() {
-        return cityName;
+    public String get性别() {
+        return 性别;
     }
 
-    public void setCityName(String cityName) {
-        this.cityName = cityName;
+    public void set性别(String 性别) {
+        this.性别 = 性别;
     }
 
-    public Date getDepartureTime() {
-        return departureTime;
+    public String get岗位() {
+        return 岗位;
     }
 
-    public void setDepartureTime(Date departureTime) {
-        this.departureTime = departureTime;
+    public void set岗位(String 岗位) {
+        this.岗位 = 岗位;
     }
 
-    public String getDepartureTimeStr() {
-        return departureTimeStr;
+    public String get手机() {
+        return 手机号码;
     }
 
-    public void setDepartureTimeStr(String departureTimeStr) {
-        this.departureTimeStr = departureTimeStr;
+    public void set手机(String 手机) {
+        this.手机号码 = 手机;
     }
 
-    public double getProductPrice() {
-        return productPrice;
+    public String get工资体系() {
+        return 工资体系;
     }
 
-    public void setProductPrice(double productPrice) {
-        this.productPrice = productPrice;
+    public void set工资体系(String 工资体系) {
+        this.工资体系 = 工资体系;
     }
 
-    public String getProductDesc() {
-        return productDesc;
+    public String get所属科室名称() {
+        return 所属科室名称;
     }
 
-    public void setProductDesc(String productDesc) {
-        this.productDesc = productDesc;
-    }
-
-    public Integer getProductStatus() {
-        return productStatus;
-    }
-
-    public void setProductStatus(Integer productStatus) {
-        this.productStatus = productStatus;
-    }
-
-    public String getProductStatusStr() {
-        return productStatusStr;
-    }
-
-    public void setProductStatusStr(String productStatusStr) {
-        this.productStatusStr = productStatusStr;
+    public void set所属科室名称(String 所属科室名称) {
+        this.所属科室名称 = 所属科室名称;
     }
 }
